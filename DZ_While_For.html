@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_While_For</title>
+    <script>
+    //   let num1 = parseInt(prompt("Введите число"));
+    //   let num2 = parseInt(prompt("Введите число"));
+    //   let sum = 0;
+
+    // if (num2 > num1) {
+    // for (let i = num1; i <= num2; i++) {
+    //     sum += i;
+    // }
+    // alert(sum);
+    // } else {
+    // alert("Второе число должно быть больше первого");
+    // }
+
+    // let num1 = parseInt(prompt("Введите число"));
+    // let num2 = parseInt(prompt("Введите число"));
+    // function dvn(a,b){
+    //     while(b !== 0){
+    //         let del = b;
+    //         b = a%b;
+    //         a = del;
+    //     }return a;
+    // } let result = dvn(num1,num2);
+    // alert(`Наибольший общий делитель ${num1} и ${num2} равен ${result}`);
+
+    //  let num1 = parseInt(prompt("Введите число"));
+    //  function dvn(b) {
+    //  let divisors = [];
+    //  for (let del = 1; del <= b; del++) {
+    //     if (b % del === 0) {
+    //         divisors.push(del);
+    //     }
+    // }
+    // return divisors;
+    // }
+    // let result = dvn(num1);
+    // alert(`Делители числа ${num1} равны ${result}`);
+
+    // const num = prompt("Введите число");
+    // alert(`${num.length}`) ;
+
+   
+//     positives = 0
+//     negatives = 0
+//     zeroes = 0
+//     even = 0
+//     odd = 0
+
+//     for (i in range[10]){
+//     num = int(input("Введите число: "))
+//     if(num > 0){
+//         positives += 1}
+//     else if(num < 0){
+//         negatives += 1}
+//     else{
+//         zeroes += 1}
+    
+//     if(num % 2 == 0){
+//         even += 1}
+//     else{
+//         odd += 1}
+
+// alert("Положительных чисел:" ,positives);
+// alert("Отрицательных чисел:", negatives);
+// alert("Нулей:", zeroes);
+// alert("Четных чисел:", even);
+// alert("Нечетных чисел:", odd);}
+
+
+// let positives = 0;
+// let negatives = 0;
+// let zeroes = 0;
+// let even = 0;
+// let odd = 0;
+
+// for (let i = 0; i < 10; i++) {
+//   let num = parseInt(prompt("Введите число: "));
+//   if (isNaN(num)) {
+//     alert("Ошибка ввода. Пожалуйста, введите число.");
+//     continue;
+//   }
+//   if (num > 0) {
+//     positives++;
+//   } else if (num < 0) {
+//     negatives++;
+//   } else {
+//     zeroes++;
+//   }
+//   if (num % 2 === 0) {
+//     even++;
+//   } else {
+//     odd++;
+//   }
+// }
+
+// alert(`Положительных чисел: ${positives}`);
+// alert(`Отрицательных чисел: ${negatives}`);
+// alert(`Нулей: ${zeroes}`);
+// alert(`Четных чисел: ${even}`);
+// alert(`Нечетных чисел: ${odd}`);
+
+
+// while (true) {
+//   let int1 = parseInt(prompt("Введите первое число"));
+//   let int2 = parseInt(prompt("Введите второе число"));
+//   let calc = prompt("Введите действие (/, *, +, -) или 'отмена' для выхода");
+
+//   if (calc === "отмена") break;
+
+//   if (calc === "/") {
+//     if (int2 === 0) {
+//       alert("Делить на 0 нельзя!");
+//     } else {
+//       alert(int1 / int2);
+//     }
+//   } else if (calc === "*") {
+//     alert(int1 * int2);
+//   } else if (calc === "+") {
+//     alert(int1 + int2);
+//   } else if (calc === "-") {
+//     alert(int1 - int2);
+//   } else {
+//     alert("Недопустимое действие. Пожалуйста, выберите одно из следующих: /, *, +, -");
+//   }
+// }
+
+    // function moveElements(numberStr, count) {
+    // let number = numberStr.split('').map(Number);
+    // for (let i = 0; i < count; i++) {
+    //     if (number.length === 0) break;
+    //     number.push(number.shift());
+    // }
+    // return number.join('');
+    // }
+
+    // let numberStr = prompt("Введите число");
+    // let transfer = parseInt(prompt("Введите значение сдвига цифр"));
+    // alert(moveElements(numberStr, transfer));
+
+    // const days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+    // for (
+    // let iDay = 0;
+    // confirm(`${days[iDay]}. Хотите увидеть следующий день?`);
+    // iDay = (iDay + 1) % days.length
+    // );
+
+    // for(let i=2; i<9; i++){
+    //     alert(`Таблица умножения для ${i}`);
+    //     for(let j=1; j<=10; j++){
+    //         alert(`${i} x ${j} = ${i*j}`);}
+    //     alert();}
+        
+           
+let low = 0;
+let high = 100;
+let guess;
+alert(`Загадай число от 0 до 100`);
+while (true) {
+  let N = Math.floor((low + high) / 2);
+  alert(`Мое предположение: ${N}`);
+  alert(`Ваше число > ${N}, < ${N} или == ${N}?`);
+  guess = prompt("Введите '>' или '<' или '=='");
+
+  if (guess === ">") {
+    low = N + 1;
+  } else if (guess === "<") {
+    high = N - 1;
+  } else if (guess === "==") {
+    alert(`Я угадал! Ваше число действительно равно ${N}`);
+    break;
+  } else {
+    alert("Некорректный ввод. Пожалуйста, введите '>' или '<' или '=='");
+  }
+}
+
+        
+        
+
+</script>
+    
+</head>
+<body>
+    
+</body>
+</html>
